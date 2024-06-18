@@ -15,6 +15,18 @@
 %accountSettingsBadges {
   background-color: rgba(0, 0, 0, calc(var(--background-shading) * 0.4));
 }
+// MY ACCOUNT - VERIFY PHONE
+%phoneVerification {
+  background-color: hsla(0, 0%, 100%, 0.07);
+  border: none;
+  box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 0.09);
+  &:focus-within {
+    box-shadow: 0 0 2px 2px $main-color;
+  }
+}
+%phoneVerification %phoneVerificationInput {
+  background-color: transparent;
+}
 
 // USER PROFILE
 %avatarOptionBox {
@@ -189,17 +201,32 @@
 %copyGiftCode {
   background-color: hsla(0, 0%, 100%, 0.07);
 }
+%themeDark %giftQuestContainer {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+%giftQuestProgress {
+  color: $main-color !important;
+}
 
 // SERVER BOOST
-%userSettingsBoostHeaderBorderRect {
-  stroke: $main-color;
+%userSettingsBoostHeaderGradient {
+  fill: rgba(0, 0, 0, 0.6);
 }
-%userSettingsBoostHeader,
+%userSettingsBoostApplied {
+  background-color: transparent;
+}
 %userSettingsBoostGuildContainer,
+%userSettingsBoostContainer,
 %userSettingsBoostGuildSearchWrapper,
 %userSettingsBoostRecognitionCard,
 %userSettingsBoostFAQ {
   background-color: rgba(0, 0, 0, 0.4);
+}
+%userSettingsBoostTransferSearch {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+%userSettingsBoostTransferButton {
+  background-color: $main-color;
 }
 
 // APPEARANCE
