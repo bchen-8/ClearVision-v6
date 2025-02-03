@@ -51,10 +51,10 @@
 
 // CLIPS
 %clipsShareTo {
-  background: rgba(0, 0, 0, 0.4);
+  background: cv('bg.general.card');
   &:hover {
     background: $hover-color;
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 %clipsUploadModal {

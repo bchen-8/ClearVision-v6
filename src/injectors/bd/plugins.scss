@@ -4,11 +4,11 @@ div#magane div.stickerWindow {
 }
 div#magane div.stickerWindow div.stickers h3.getStarted {
   color: #fff;
-}
+}/*
 div#magane div.stickerWindow:not(:has(> [style^='display'])) div.stickers *,
 div#magane div.stickerWindow:not(:has(> [style^='display'])) div.packs-toolbar * {
   display: none;
-}
+}*/
 div#magane .stickersModal .modal-content,
 div#magane .stickersModal .modal-card {
   background: transparent;
@@ -38,7 +38,7 @@ div#magane div.stickerWindow div.packs-toolbar {
 .replyer,
 .btn-quote,
 .citar-btn {
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: cv('bg.general.card') !important;
   border-radius: 3px;
   transition: background-color 0.3s ease-in-out;
   &:hover {
@@ -75,7 +75,7 @@ div#magane div.stickerWindow div.packs-toolbar {
 #MemberCount {
   background: transparent;
   h3 {
-    color: var(--text-normal);
+    color: $text-normal;
     padding: 12px 0;
     flex-direction: column;
     font-size: 11px;
@@ -164,11 +164,8 @@ div#magane div.stickerWindow div.packs-toolbar {
   margin-bottom: -2px;
 }
 // GAMEACTIVITYTOGGLE - DEVILBRO
-%themeDark {
-  %bdGameActivityToggle %accountPanelTagButton,
-  %bdGameActivityToggle %accountPanelTagless {
-    min-width: calc(100% - 140px) !important;
-  }
+%themeDark %accountPanelAvatarWrapper:has(+ div > button:nth-child(4)) {
+  min-width: 0px !important;
 }
 // OWNER TAG - DEVILBRO
 .owner-tag {

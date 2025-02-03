@@ -2,7 +2,7 @@
 %panels {
   background: transparent;
   > :first-child {
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, calc(#{cv('bg.app.shading')} * 0.3));
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, calc($bg-shading * 0.3));
   }
 }
 %themeDark %panel {
@@ -29,35 +29,16 @@
     }
   }
 }
-
-// BUTTONS
-button%panelButton {
-  width: 32px;
-  height: 32px;
-  opacity: 1;
-  > %buttonContents > svg {
-    @include bg($rep: no-repeat, $pos: center, $size: 18px);
-    color: #fff;
-    opacity: 0.5;
-    transition: all 0.1s ease-in-out;
-    > path[fill*='var(--interactive-normal)'] {
-      fill: #fff;
-    }
-  }
+/* Account for account panel width scaling under
+  new design */
+%themeDark %accountPanelAvatarWrapper {
+  min-width: calc(var(--channels-width) - 120px);
   &:hover {
-    &%panelButtonEnabled {
-      background: transparent;
-    }
-    > %buttonContents > svg {
-      opacity: 0.7;
-    }
-  }
-  &%panelButtonDisabled {
-    > %buttonContents > svg {
-      opacity: 0.1;
-    }
+    background-color: hsla(0, 0%, 100%, 0.1);
   }
 }
+
+// BUTTONS
 %panelActionButtons {
   grid-gap: 6px;
 }
@@ -72,7 +53,7 @@ button%panelButton {
         color: $hover-color;
       }
       %panelActionButtonLottieIcon {
-        --__lottieIconColor: var(--main-color) !important;
+        --__lottieIconColor: currentcolor !important;
       }
     }
   }
@@ -191,4 +172,34 @@ button%panelButton {
 // NOISE CANCELLATION POPOUT
 %noiseCancellationPopout {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+// QUEST PANEL
+%themeDark %questPanel {
+  background: transparent;
+}
+%questPanelAccepted {
+  background: transparent !important;
+}
+%questPanelAcceptedExpandedBackground {
+  background: transparent !important;
+  border-top: 2px solid hsla(0, 0%, 100%, 0.05);
+}
+%questPanelContentExpanded {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px 8px 0 0;
+}
+%questPanelAcceptedExpandedContent {
+  visibility: hidden;
+  %questPanelExpanded & {
+    visibility: visible;
+  }
+}
+
+// SPOTIFY/YT MUSIC MAYBE?/IDK
+%listeningAlongPanel {
+  background: transparent;
+  %panelTitle {
+    color: $main-color;
+  }
 }
