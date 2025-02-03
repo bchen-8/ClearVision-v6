@@ -63,7 +63,7 @@
   /* CHANNEL TEXT COLORS */
   --channel-color: rgba(255, 255, 255, 0.3); /* channel text color [default: rgba(255, 255, 255, 0.3)] */
   --channel-hovered: rgba(255, 255, 255, 0.7); /* hovered channel text color [default: rgba(255, 255, 255, 0.7)] */
-  --channel-unread: var(--main-color); /* unread channel textcolor [default: var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
+  --channel-unread: rgba(205, 234, 255, 0.7); /* unread channel textcolor [default: var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
   --channel-selected: #ffffff; /* selected channel text color [default: #ffffff] */
   --channel-muted: rgba(255, 255, 255, 0.1); /* muted channel text color [default: rgba(255,255,255,0.1)] */
 
